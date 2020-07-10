@@ -84,9 +84,9 @@ SDL 有一些基础数据类型如下(支持自定义数据类型)：
 
 ## nodejs 接入 GraphQL
 
-nodejs 使用 apollo 服务端模块 apollo-server-koa 实现 GraphQL 接口规范，并且实现项目目录工程化分类，易于理解和开发
+apollo 包含 2 组用于客户端和服务端的开源模块和一个强力的开发人员工具，方便开发人员接入，开发和运行 GraphQL API 应用
 
-apollo 包含 2 组用于客户端和服务端的开源模块，和一个强力的开发人员工具，方便开发人员接入，开发和运行 GraphQL API 应用
+本项目在 nodejs + koa 上使用 apollo 服务端模块 apollo-server-koa 实现 GraphQL API。和 koa Restful 规范 MVC 模型中，schema 相当于 router ，而 resolver 相当于 controller。
 
 ### 使用
 

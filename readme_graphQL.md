@@ -1,9 +1,19 @@
+## GraphQL 简介
+
 参考资料：
 
 1. https://juejin.im/post/5d5d2f9ef265da03c02c06ed#heading-25
 2. https://graphql.cn/
+3. https://www.apollographql.com/
 
-## GraphQL 简介
+常见依赖模块：
+
+1. graphql-compose
+2. graphql-compose-mongoose
+3. graphql
+4. apollo-server-koa
+5. dataloader
+6. egg-graphql
 
 ### 是什么
 
