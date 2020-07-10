@@ -70,12 +70,12 @@ const apolloOptions = {
   playground: !isProd, // 如果是生产环境则关闭开发者功能
   mocks: false, // 开启mock，用于在功能未开发完的情况下，模拟假数据返回客户端
   context: ({ ctx }) => ({ ctx }),
-  /* formatError: (error) => {
+  formatError: (error) => {
     return {
       code: error.extensions.code,
       message: error.message,
     };
-  }, // 定制化返回的错误响应体格式 */
+  }, // 定制化返回的错误响应体格式
 };
 
 module.exports = new ApolloServer(apolloOptions);
