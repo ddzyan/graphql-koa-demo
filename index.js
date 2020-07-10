@@ -1,8 +1,13 @@
 const Koa = require('koa');
 const apolloServer = require('./src/graphql');
 
+const auth = require('./src/middlewares/auth');
+
 const app = new Koa();
 
+app.use(auth);
+
+// koa 中间价加载必须在apolloServer挂载之前
 apolloServer.applyMiddleware({ app });
 
 app.listen(4000, () => {

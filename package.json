@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "apollo-server-koa": "^2.15.1",
+    "dataloader": "^2.0.0",
     "koa": "^2.13.0",
     "moment": "^2.27.0"
   },
