@@ -22,3 +22,4 @@ yarn start
 4. 自定义 Scalar type
 5. 自定义 directives
 6. 通过透传 koa ctx 对象，在 GraphQL 中实现接口认证
+7. 使用第三方模块 dataloader 合并多次 I/O 处理
