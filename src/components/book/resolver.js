@@ -10,6 +10,7 @@ const resolver = {
       name: '时间简史',
       price: 55.2,
       status: BookStatus.NORMAL,
+      created: 1199116800000,
     }),
   },
 };

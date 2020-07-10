@@ -2,10 +2,14 @@ const { ApolloServer, gql } = require('apollo-server-koa');
 const { resolve, join } = require('path');
 const fs = require('fs');
 
+const allCustomScalars = require('./scalars');
+
 const defaultTypeFileName = 'schema.js';
 const defaultResolverFileName = 'resolver.js';
 const defaultPath = resolve(__dirname, '../components');
 const linkSchema = gql`
+  scalar Date
+
   type Query {
     _: Boolean
   }
@@ -22,7 +26,7 @@ const linkSchema = gql`
 // 递归产生所有组件
 const generateAllComponentRecursive = () => {
   const typeDefs = [linkSchema];
-  const resolvers = {};
+  const resolvers = { ...allCustomScalars };
 
   const _generateAllComponentRecursive = (path = defaultPath) => {
     const list = fs.readdirSync(path);
@@ -59,7 +63,7 @@ const apolloOptions = {
   ...generateAllComponentRecursive(),
   introspection: isProd, // 如果是生产环境，则关闭内省功能
   playground: isProd, // 如果是生产环境则关闭开发者功能
-  mocks: true, // 开启mock，用于在功能未开发完的情况下，模拟假数据返回客户端
+  mocks: false, // 开启mock，用于在功能未开发完的情况下，模拟假数据返回客户端
   formatError: (error) => {
     return {
       code: error.extensions.code,

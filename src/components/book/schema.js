@@ -11,6 +11,7 @@ const schema = gql`
     name: String
     price: Float
     status: BookStatus
+    created: Date
   }
 
   extend type Query {
