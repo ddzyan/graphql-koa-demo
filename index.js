@@ -50,8 +50,8 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  introspection: isProd, // 如果是生产环境，则关闭内省功能
-  playground: isProd, // 如果是生产环境则关闭开发者功能
+  introspection: !isProd, // 如果是生产环境，则关闭内省功能
+  playground: !isProd, // 如果是生产环境则关闭开发者功能
   mocks: true, // 开启mock，用于在功能未开发完的情况下，模拟假数据返回客户端
   formatError: (error) => {
     return {

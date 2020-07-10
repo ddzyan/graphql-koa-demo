@@ -7,7 +7,7 @@
     "apollo-server-koa": "^2.15.1",
     "koa": "^2.13.0"
   },
-  "script": {
+  "scripts": {
     "start": "node ./index.js"
   }
 }
