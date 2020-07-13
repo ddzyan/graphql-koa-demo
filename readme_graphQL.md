@@ -6,6 +6,10 @@
 2. https://graphql.cn/
 3. https://www.apollographql.com/
 
+实例项目：
+
+1. https://github.com/ddzyan/graphql-koa-demo
+
 常见依赖模块：
 
 1. graphql-compose
@@ -14,6 +18,12 @@
 4. apollo-server-koa
 5. dataloader
 6. egg-graphql
+
+快速上手步骤：
+
+1. 阅读官方文档，理解概念 https://graphql.cn/
+2. 在 koa 框架上实现 GraphQL https://juejin.im/post/5d5d2f9ef265da03c02c06ed#heading-25
+3. 对比案例查漏补缺 https://github.com/ddzyan/graphql-koa-demo
 
 ### 是什么
 
